@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'Kumir_ui.ui'
+# Form implementation generated from reading ui file 'C:\Users\иван\Documents\GitHub\NedoKumir\Kumir_ui.ui'
 #
 # Created by: PyQt5 UI code generator 5.14.0
 #
@@ -22,6 +22,9 @@ class Ui_Kumir(object):
         self.textEdit = QtWidgets.QTextEdit(self.tab)
         self.textEdit.setGeometry(QtCore.QRect(0, 0, 1111, 871))
         self.textEdit.setObjectName("textEdit")
+        self.pushButton = QtWidgets.QPushButton(self.tab)
+        self.pushButton.setGeometry(QtCore.QRect(10, 860, 91, 31))
+        self.pushButton.setObjectName("pushButton")
         self.tabWidget.addTab(self.tab, "")
         self.tab_2 = QtWidgets.QWidget()
         self.tab_2.setObjectName("tab_2")
@@ -301,12 +304,13 @@ class Ui_Kumir(object):
         self.tabWidget.addTab(self.tab_2, "")
 
         self.retranslateUi(Kumir)
-        self.tabWidget.setCurrentIndex(1)
+        self.tabWidget.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(Kumir)
 
     def retranslateUi(self, Kumir):
         _translate = QtCore.QCoreApplication.translate
         Kumir.setWindowTitle(_translate("Kumir", "Kumir"))
+        self.pushButton.setText(_translate("Kumir", "Запуск"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), _translate("Kumir", "Код"))
         self.label.setText(_translate("Kumir", "◆︎"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), _translate("Kumir", "Вывод"))
