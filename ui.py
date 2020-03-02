@@ -10,11 +10,11 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
-class Ui_Form(object):
-    def setupUi(self, Form):
-        Form.setObjectName("Form")
-        Form.resize(1104, 913)
-        self.tabWidget = QtWidgets.QTabWidget(Form)
+class Ui_Kumir(object):
+    def setupUi(self, Kumir):
+        Kumir.setObjectName("Kumir")
+        Kumir.resize(1104, 913)
+        self.tabWidget = QtWidgets.QTabWidget(Kumir)
         self.tabWidget.setGeometry(QtCore.QRect(0, 0, 1301, 911))
         self.tabWidget.setObjectName("tabWidget")
         self.tab = QtWidgets.QWidget()
@@ -290,24 +290,33 @@ class Ui_Form(object):
         self.line_53.setFrameShape(QtWidgets.QFrame.VLine)
         self.line_53.setFrameShadow(QtWidgets.QFrame.Sunken)
         self.line_53.setObjectName("line_53")
+        self.label = QtWidgets.QLabel(self.tab_2)
+        self.label.setGeometry(QtCore.QRect(500, 490, 40, 40))
+        self.label.setStyleSheet("QLabel{\n"
+"qproperty-alignment: AlignCenter;\n"
+"font-size: 32px;\n"
+"}\n"
+"")
+        self.label.setObjectName("label")
         self.tabWidget.addTab(self.tab_2, "")
 
-        self.retranslateUi(Form)
+        self.retranslateUi(Kumir)
         self.tabWidget.setCurrentIndex(1)
-        QtCore.QMetaObject.connectSlotsByName(Form)
+        QtCore.QMetaObject.connectSlotsByName(Kumir)
 
-    def retranslateUi(self, Form):
+    def retranslateUi(self, Kumir):
         _translate = QtCore.QCoreApplication.translate
-        Form.setWindowTitle(_translate("Form", "Form"))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), _translate("Form", "Код"))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), _translate("Form", "Вывод"))
+        Kumir.setWindowTitle(_translate("Kumir", "Kumir"))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), _translate("Kumir", "Код"))
+        self.label.setText(_translate("Kumir", "◆︎"))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), _translate("Kumir", "Вывод"))
 
 
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
-    Form = QtWidgets.QWidget()
-    ui = Ui_Form()
-    ui.setupUi(Form)
-    Form.show()
+    Kumir = QtWidgets.QWidget()
+    ui = Ui_Kumir()
+    ui.setupUi(Kumir)
+    Kumir.show()
     sys.exit(app.exec_())
