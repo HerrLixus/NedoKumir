@@ -298,8 +298,8 @@ class Ui_Kumir(object):
         self.label.setStyleSheet("QLabel{\n"
 "qproperty-alignment: AlignCenter;\n"
 "font-size: 32px;\n"
-"}\n"
-"")
+"}"
+)
         self.label.setObjectName("label")
         self.tabWidget.addTab(self.tab_2, "")
 
@@ -314,13 +314,3 @@ class Ui_Kumir(object):
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), _translate("Kumir", "Код"))
         self.label.setText(_translate("Kumir", "◆︎"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), _translate("Kumir", "Вывод"))
-
-
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    Kumir = QtWidgets.QWidget()
-    ui = Ui_Kumir()
-    ui.setupUi(Kumir)
-    Kumir.show()
-    sys.exit(app.exec_())
