@@ -10,8 +10,10 @@ Kumir.show()
 
 code = ""
 
-Kumirs = ["влево", "вправо", "вверх", "вниз", "цикл", "закрасить", "если", "закрашено", "вывод"]
-Pythons = ["left", "right", "up", "down", "for i in range", "color", "if", "isColored", "print"]
+Kumirs = ["влево", "вправо", "вверх", "вниз", "цикл", "закрасить", "если", "инес", "иначе", "закрашено", "слева",
+          "справа", "сверху", "снизу", "вывод"]
+Pythons = ["left", "right", "up", "down", "for i in range", "color", "if", "elif", "else", "isColored(", "'onleft')",
+           "'onright')", "'ontop')", "'ondown')", "print"]
 
 xcoord = ui.label.pos().x()
 ycoord = ui.label.pos().y()
@@ -64,11 +66,19 @@ def color():
     "cells.append(eval('ui.cell_'+str(colored_cells)))"]))
 
 
-def isColored(x, y):
+def isColored(arg):
+    global xcoord
+    global ycoord
     global cells
     gate = False
     for i in cells:
-        if i.pos().x() == x and i.pos().y() == y:
+        if arg == "onleft" and i.pos().x() == xcoord - 40 and i.pos().y() == ycoord:
+            gate = True
+        elif arg == "onright" and i.pos().x() == xcoord + 40 and i.pos().y() == ycoord:
+            gate = True
+        elif arg == "ontop" and i.pos().x() == xcoord and i.pos().y() == ycoord - 40:
+            gate = True
+        elif arg == "ondown" and i.pos().x() == xcoord and i.pos().y() == ycoord + 40:
             gate = True
     return gate
 
